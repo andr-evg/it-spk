@@ -3,10 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" /> -->
-    <link rel="stylesheet" href="css/style.min.css">
-    
+    <link rel="stylesheet" href="css/style.css">   
     <title>IT-SPK</title>
 </head>
 <body>
@@ -27,7 +24,36 @@
 	            <div class="tel__operator">Vodafone</div>
 			</div>
 		</div>
-	    <button class="button button__submit slide-menu__button">Отправить заявку<img src="img/arrow-right.svg" alt="arrow"></button>
+	    <button class="button button__main slide-menu__button" data-modal="true">Отправить заявку<img src="img/arrow-right.svg" alt="arrow"></button>
+	</div>
+	<div class="modal">
+		<div class="modal__wrap">
+			<div class="modal__times"></div>
+			<form class="modal__form form">
+				<div>
+					<input class="modal__input" type="text" name="name" placeholder="Имя">
+				</div>
+				<div>
+					<input class="modal__input" required type="tel" name="phone" placeholder="Номер телефона*">
+				</div>
+				<div>
+					<input class="modal__input" type="email" name="email" placeholder="E-mail">
+				</div>
+				<div>
+					<textarea class="modal__input" name="message" placeholder="Сообщение"></textarea>
+				</div>
+				<div class="form__file">
+					<input name="file" type="file" id="file">
+					<img src="img/file-dark.svg" alt="file">
+					<div data-file = "file">Прикрепить файл</div>
+				</div>
+				<div class="form__checkbox">
+					<input required checked type="checkbox" name="rules" id="rules">
+					<label for="rules">Даю согласие на обработку персональных данных</label>
+				</div>
+				<button class="button button__main" type="submit">Отправить <img src="img/arrow-right.svg" alt="arrow"></button>
+			</form>
+		</div>
 	</div>
 	<header class="header">
 		<nav class="nav">
@@ -60,7 +86,7 @@
 			<p class="header__info">От <span class="header__span">315</span><b>грн</b>/мес</p>
 			<p>за 1 рабочее место</p>
 			<div class="header__bottom">
-				<button class="button button__submit">Отправить заявку<img src="img/arrow-right.svg" alt="arrow"></button>
+				<button class="button button__main" data-modal="true">Отправить заявку<img src="img/arrow-right.svg" alt="arrow"></button>
 				<p class="header__bottom-text">Мы знаем как сложно найти хорошую компанию по обслуживанию компьютеров в Киеве. Исправим это!</p>
 			</div>
 		</div>
@@ -131,7 +157,7 @@
 					Абонентское обслуживание компьютеров в Киеве уже сейчас не оставляет шансов на выживание обычным сисадминам в штате компании, прежний подход дороже и неэффективный. С первого дня работы с нами вы получаете доступ ко всем нашим знаниям, опыту и ресурсам. 
 				</p>
 			</div>
-			<button class="button button__submit">Отправить заявку<img src="img/arrow-right.svg" alt="arrow"></button>
+			<button class="button button__main" data-modal="true">Отправить заявку<img src="img/arrow-right.svg" alt="arrow"></button>
 		</section>
 		<section class="target container">
 			<div class="target__heading">
@@ -211,8 +237,6 @@
 					</ul>
 				</div>
 			</div>
-			
-			
 		</section>
 		<section class="contact">
 			<div class="container">
@@ -220,30 +244,36 @@
 					<h3>Оставьте заявку на обслуживание компьютеров и мы свяжемся с вами</h3>
 				</div>
 				<div class="contact__item">
-					<form class="contact__form form" action="#">
-						<input class="form__input" type="name" name="name" placeholder="Имя">
-						<input class="form__input" type="tel" name="phone" placeholder="Номер телефона*">
-						<input class="form__input" type="email" name="email" placeholder="E-mail">
-						<textarea class="form__input form__area" name="message" placeholder="Сообщение"></textarea>
-						<label for="file" class="form__file">
-							<input type="file" id="file">
-							<img src="img/file.svg" alt="file">
-							<div class="form__file-text">Прикрепить файл</div>
-						</label>
-						<div class="form__confirm muted">
-							<label class="confirm" for="confirmCheckbox">
-								<input class="confirm__checkbox" type="checkbox" name="confirm" id="confirmCheckbox" checked="checked">
-								<span class="confirm__mask"></span>
-								Даю согласие на обработку персональных данных
-							</label>
-						</div>
-						<button class="button button__submit" type="submit">Отправить <img src="img/arrow-right.svg" alt="arrow"></button>
-					</form>
+					<div class="contact__form">
+						<form class="modal__form form">
+							<div>
+								<input class="modal__input" type="text" name="name" placeholder="Имя">
+							</div>
+							<div>
+								<input class="modal__input" required type="tel" name="phone" placeholder="Номер телефона*">
+							</div>
+							<div>
+								<input class="modal__input" type="email" name="email" placeholder="E-mail">
+							</div>
+							<div>
+								<textarea class="modal__input" name="message" placeholder="Сообщение"></textarea>
+							</div>
+							<div class="form__file">
+								<input name="file" type="file" id="file1">
+								<img src="img/file.svg" alt="file">
+								<div data-file="file1">Прикрепить файл</div>
+							</div>
+							<div class="form__checkbox">
+								<input required checked type="checkbox" name="rules" id="rules1">
+								<label for="rules1">Даю согласие на обработку персональных данных</label>
+							</div>
+							<button class="button button__main" type="submit">Отправить <img src="img/arrow-right.svg" alt="arrow"></button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</section>
 	</main>
-
 <footer class="footer">
 	<div class="container">
         <div class="footer__contacts">
@@ -265,9 +295,6 @@
         </div>
     </div>
 </footer>
-
-<script src="js/main.min.js"></script>
-
-<script></script>
+<script src="js/main.js"></script>
 </body>
 </html>
